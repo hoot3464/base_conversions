@@ -1,0 +1,16 @@
+Explanation of decimal to binary:
+
+dec_bin():
+    while dec > 0:
+    bin = str(dec % 2) + bin
+    dec = dec // 2
+
+For example, I will use the number 24. Here is what happens:
+
+1. 24 % 2 = 0 so 0 is added to the string, and then 24 // 2 = 12
+2. 12 % 2 = 0 so same thing, then 12 // 2 = 6
+3. 6 % 2 = 0 so one more 0, then 6 // 2 = 3
+4. 3 % 2 = 1 so now we have a 1, and then 3 // 2 = 1 (int division rounds down answer)
+5. 1 % 2 = 1 so we have another 1, and then 1 // 2 = 0 so the loop stops
+
+The binary number of 24 is: 11000

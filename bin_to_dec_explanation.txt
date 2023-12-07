@@ -1,0 +1,17 @@
+Explanation of binary to decimal:
+
+for i in range(len(bin)):
+    dec += int(bin[i]) * (2 ** (len(bin) - 1 - i))
+
+Let's use 1111 for example, which in decimal is 15. 
+Since the binary string is 4 characters long, the loop will iterate 4 times.
+The index starts at 0 which is why the exponent has a -1 in it
+
+1. 1 * (2^(4 - 1 - 0)) = 1 * 2^3 = 8
+2. 1 * (2^(4 - 1 - 1)) = 1 * 2^2 = 4
+3. 1 * (2^(4 - 1 - 2)) = 1 * 2^1 = 2
+4. 1 * (2^(4 - 1 - 3)) = 1 * 2^0 = 1
+
+dec = 8 + 4 + 2 + 1 = 15
+
+If any digit in the binary string is 0, it is simply skipped and not added to the total.

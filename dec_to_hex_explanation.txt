@@ -1,0 +1,35 @@
+Decimal to Hexadecimal Explanation:
+
+dec_to_hex():
+    
+    hexa = ""
+
+    while num > 0:
+        
+        remainder = num % 16
+        
+        if remainder < 10:
+            hexa = str(remainder) + hexa
+        elif remainder == 10:
+            hexa = "A" + hexa
+        elif remainder == 11:
+            hexa = "B" + hexa
+        elif remainder == 12:
+            hexa = "C" + hexa
+        elif remainder == 13:
+            hexa = "D" + hexa
+        elif remainder == 14:
+            hexa = "E" + hexa
+        elif remainder == 15:
+            hexa = "F" + hexa
+       
+        num = num // 16
+
+In this function, there are 3 steps:
+1. Get the modulus of the number divided by 16
+2. Add to the hexa string depending on if the remainder is less than 10 or not
+3. Do integer division by 16 until the number is 0
+
+The way this is done is similar to how decimal is converted to binary.
+The advantage of hex is you can use up to 255 values within 2 digits. 
+255 in hex is FF
